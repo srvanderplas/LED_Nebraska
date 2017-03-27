@@ -14,23 +14,23 @@ load("./Data/FakeData.Rdata")
 shinyUI(fluidPage(
 
   # Application title
-  titlePanel("LED Streetlights"), 
+  titlePanel("LED Streetlights"),
 
 
   fluidRow(
     column(
       width = 10,
       leafletOutput("map", width = "100%", height = '600px')
-    ), 
+    ),
     column(
-      width = 2, 
+      width = 2,
       sliderInput(
         "time",
         "Month",
         min = min(dates),
-        max = max(dates), 
-        value = min(dates), 
-        animate = animationOptions(interval = 50)
+        max = max(dates),
+        value = min(dates),
+        animate = animationOptions(interval = 100)
       )
     )
   ),
